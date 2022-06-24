@@ -1,9 +1,14 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { FaShoppingCart } from "react-icons/fa";
 import { FaUserAlt } from "react-icons/fa";
-
+import { Link } from 'react-router-dom';
+import auth from '../firebase.config';
+import { signOut } from "firebase/auth";
 
 const Header = () => {
+
+  const [user] = useAuthState(auth);
     return (
       <div>
         <div class="navbar bg-orange-300 py-5 px-10">
@@ -69,7 +74,9 @@ const Header = () => {
           <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal p-0">
               <li>
-                <a className="text-xl font-semibold">Home</a>
+                <Link className="text-xl font-semibold" to="/">
+                  Home
+                </Link>
               </li>
               <li>
                 <a className="text-xl font-semibold">About</a>
@@ -78,6 +85,15 @@ const Header = () => {
               <li>
                 <a className="text-xl font-semibold">Products</a>
               </li>
+              {!user ? (
+                <li>
+                  <Link to="/login" className="text-xl font-semibold">Login</Link>
+                </li>
+              ) : (
+                <li>
+                  <a className="text-xl font-semibold" onClick={() => signOut(auth)}>Logout</a>
+                </li>
+              )}
             </ul>
           </div>
           <div className="navbar-end">
@@ -85,7 +101,10 @@ const Header = () => {
               <FaShoppingCart />
             </span>
             <span className="cart-icon">
-              <FaUserAlt />
+              <Link to="/register">
+                {" "}
+                <FaUserAlt />
+              </Link>
             </span>
           </div>
         </div>

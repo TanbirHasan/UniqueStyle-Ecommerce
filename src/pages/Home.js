@@ -1,6 +1,8 @@
 import React from 'react';
 import Banner from '../components/Banner';
 import FeatureProduct from '../components/FeatureProduct';
+import Footer from '../components/Footer';
+import Newsletter from '../components/Newsletter';
 
 
 const Home = () => {
@@ -8,6 +10,8 @@ const Home = () => {
         <div>
            <Banner/>
            <FeatureProduct/>
+           <Newsletter/>
+           <Footer/>
         </div>
     );
 };
