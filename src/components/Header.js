@@ -1,9 +1,12 @@
 import React from 'react';
+import { FaShoppingCart } from "react-icons/fa";
+import { FaUserAlt } from "react-icons/fa";
+
 
 const Header = () => {
     return (
       <div>
-        <div class="navbar bg-orange-300 py-5">
+        <div class="navbar bg-orange-300 py-5 px-10">
           <div class="navbar-start">
             <div class="dropdown">
               <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -63,11 +66,10 @@ const Header = () => {
               UniqueStyle
             </a>
           </div>
-          <div class="navbar-end hidden lg:flex">
+          <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal p-0">
               <li>
                 <a className="text-xl font-semibold">Home</a>
-               
               </li>
               <li>
                 <a className="text-xl font-semibold">About</a>
@@ -76,12 +78,15 @@ const Header = () => {
               <li>
                 <a className="text-xl font-semibold">Products</a>
               </li>
-              <li>
-                <a className="cart-icon">
-                  <i class="fa-solid fa-cart-circle-plus"></i>
-                </a>
-              </li>
             </ul>
+          </div>
+          <div className="navbar-end">
+            <span className="cart-icon">
+              <FaShoppingCart />
+            </span>
+            <span className="cart-icon">
+              <FaUserAlt />
+            </span>
           </div>
         </div>
       </div>
