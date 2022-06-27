@@ -1,0 +1,61 @@
+[
+    {
+  
+      
+        "img" : "https://i.ibb.co/dbB0y3d/tshrit3.webp",
+        "title" : "Being Human Olive color T-shirt",
+        "desc" : "100% Original Product",
+        "size" : ["XL","M","L"],
+        "color" : ["White","Black"],
+        "price" : "350",
+        "categories" : "Tshirt"
+        
+
+    },
+      {
+     
+       
+        "img" : "https://i.ibb.co/Ss23mYw/thisrt4.webp",
+        "title" : "Puma Round Neck T-shirt",
+        "desc" : "100% Original Product",
+        "size" : ["XL","M","L"],
+        "color" : ["White","Black","Olive"],
+        "price" : "320",
+        "categories" : "Tshirt"
+        
+
+    },
+    {
+        
+         "img" : "https://i.ibb.co/T1BXHvH/top5.webp",
+        "title" : "Casual Cutout Solid Women Top",
+        "desc" : "100% Original Product",
+        "size" : ["XL","M","L"],
+        "color" : ["Red","Black","Olive"],
+        "price" : "520",
+        "categories" : "Womenstop",
+        "inStock" : "true"
+    },
+        {
+            
+         "img" : "https://i.ibb.co/qC2MvMX/top3.webp",
+        "title" : "Casual Regular Sleeves Solid Women Top",
+        "desc" : "100% Original Product",
+        "size" : ["XL","M","L"],
+        "color" : ["Red","Black","Olive"],
+        "price" : "580",
+        "categories" : "Womenstop"
+        
+    },
+         {
+             
+         "img" : "https://i.ibb.co/qD87hB0/Shoes.webp",
+        "title" : "EDOAR Running Shoes ",
+        "desc" : "100% Original Product",
+        "size" : ["38","39","40"],
+        "color" : ["Black","Olive"],
+        "price" : "1200",
+        "categories" : "Shoes"
+        
+    }
+]

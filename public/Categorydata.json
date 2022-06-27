@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "img": "https://i.ibb.co/jhPdgyJ/s-ts-612-moonvelly-original-imagdhwwapdfta59.webp",
+    "title": "SHIRT STYLE!",
+    "cat": "Tshirt"
+  },
+  {
+    "id": 2,
+    "img": "https://i.ibb.co/4KTb0VG/Shoes.webp",
+    "title": "Shoes",
+    "cat": "Shoes"
+  },
+  {
+    "id": 3,
+    "img": "https://i.ibb.co/s9Ngj7N/Womens-top.webp",
+    "title": "Womens Top",
+    "cat": "Womenstop"
+  }
+]

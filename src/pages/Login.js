@@ -4,6 +4,7 @@ import {
   useSignInWithGoogle,
   useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
+  useAuthState,
 } from "react-firebase-hooks/auth";
 import auth from "../firebase.config";
 import { Formik } from "formik";
@@ -11,10 +12,11 @@ import validate from "../components/Validate";
 
 const Login = () => {
   const navigate = useNavigate();
+  const [user] = useAuthState(auth)
 
   const emailref = useRef()
   const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
-const [signInWithEmailAndPassword, user, loading, error] =
+const [signInWithEmailAndPassword, newuser, loading, error] =
   useSignInWithEmailAndPassword(auth);
 
       const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
@@ -23,12 +25,12 @@ const [signInWithEmailAndPassword, user, loading, error] =
   if (loading || gloading) {
     return <span>loading</span>;
   }
-  if (user) {
+  if (newuser) {
     navigate("/");
   }
 
   const resetPassword = async () => {
-     const email = emailref.current.valuel;
+     const email = emailref.current.value;
      if (email) {
        await sendPasswordResetEmail(email);
        alert("Sent email");
@@ -41,15 +43,12 @@ const [signInWithEmailAndPassword, user, loading, error] =
     <div>
       <Formik
         initialValues={{
-        
           email: "",
           password: "",
-        
         }}
         validate={(values) => {
           const errors = {};
           /* validating first name */
-       
 
           /* validating email using regex to pass email */
           if (!values.email) {
@@ -67,8 +66,6 @@ const [signInWithEmailAndPassword, user, loading, error] =
             errors.password = "Password length is weak 😩";
           }
 
-      
-
           return errors;
         }}
         onSubmit={(values, { setSubmitting, resetForm }) => {
@@ -78,6 +75,10 @@ const [signInWithEmailAndPassword, user, loading, error] =
           setTimeout(() => {
             signInWithEmailAndPassword(values.email, values.password);
             setSubmitting(true);
+
+            if (!user) {
+              setForget(true);
+            }
 
             resetForm();
           }, 400);
@@ -98,7 +99,6 @@ const [signInWithEmailAndPassword, user, loading, error] =
               <div className="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
                 <div className="bg-white px-6 py-8 rounded shadow-md text-black w-full">
                   <h1 className="mb-8 text-3xl text-center">Login ▶</h1>
-                  
 
                   <input
                     type="text"
@@ -135,17 +135,21 @@ const [signInWithEmailAndPassword, user, loading, error] =
                     type="submit"
                     className="w-full text-center py-3 rounded bg-green-600 text-white hover:bg-green-dark focus:outline-none my-1"
                   >
-                   Login 
+                    Login
                   </button>
-                  <p>Forget Password?<button onClick={resetPassword}>Reset Password </button></p>
+                  {forget && (
+                    <p>
+                      Forget Password?
+                      <button onClick={resetPassword}>Click Here</button>
+                    </p>
+                  )}
                 </div>
 
                 <div className="text-grey-dark mt-6">
                   New Here?
                   <Link
-                  to="/register"
+                    to="/register"
                     className="no-underline border-b border-blue text-blue"
-                   
                   >
                     Please Register
                   </Link>

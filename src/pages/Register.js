@@ -16,6 +16,7 @@ const Register = () => {
   const [signInWithGoogle, guser, gloading,gerror] = useSignInWithGoogle(auth);
 const [createUserWithEmailAndPassword, user, loading, error] =
   useCreateUserWithEmailAndPassword(auth);
+ 
 
   if (loading || gloading ) {
     return <span>loading</span>;
