@@ -2,14 +2,18 @@ import axios from 'axios';
 import { itMatchesOne } from 'daisyui/src/lib/postcss-prefixer/utils';
 import React, { useEffect, useState } from 'react';
 import {useLocation} from "react-router-dom"
+import { addCart,delCart } from '../redux/action';
+import {useSelector, useDispatch } from 'react-redux';
 
 const Product = () => {
+     const [cartbtn , setCartbtn] = useState('Add to Cart')
      const location = useLocation();
      const id = location.pathname.split("/")[2];
-     const [product, setProduct] = useState({});
+     const [product, setProduct] = useState([]);
 
 
-
+     const dispatch = useDispatch();
+   
      useEffect(() => {
        const getProduct = async () => {
          try {
@@ -19,6 +23,20 @@ const Product = () => {
        };
        getProduct();
      }, [id]);
+
+
+     const handleCart = (product) => {
+      if(cartbtn === "Add to Cart"){
+          dispatch(addCart(product));
+        setCartbtn("Remove from Cart")
+        
+      }
+      else{
+          dispatch(delCart(product));
+        setCartbtn("Add to Cart")
+      }
+
+     }
     return (
       <section class="text-gray-700 body-font overflow-hidden bg-white">
         <div class="container px-5 py-24 mx-auto">
@@ -164,10 +182,12 @@ const Product = () => {
               </div>
               <div class="flex">
                 <span class="title-font font-medium text-2xl text-gray-900">
-                  $58.00
+                 {product.price}
                 </span>
-                <button class="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
-                  Button
+                <button class="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded"
+                 onClick={() => handleCart(product)}
+                >
+                {cartbtn}
                 </button>
                 <button class="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                   <svg

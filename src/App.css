@@ -29,3 +29,8 @@
  .feature-image{
    max-height: 100%;
  }
+
+ .cart-img{
+   width:100px;
+   height: 130px;
+ }

@@ -4,11 +4,13 @@ import { FaShoppingCart } from "react-icons/fa";
 import { FaUserAlt } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import auth from '../firebase.config';
+import { useSelector } from 'react-redux/es/hooks/useSelector';
 import { signOut } from "firebase/auth";
 
 const Header = () => {
 
   const [user] = useAuthState(auth);
+  const state = useSelector((state) => state.handleCart)
     return (
       <div>
         <div class="navbar bg-orange-300 py-5 px-10">
@@ -87,18 +89,31 @@ const Header = () => {
               </li>
               {!user ? (
                 <li>
-                  <Link to="/login" className="text-xl font-semibold">Login</Link>
+                  <Link to="/login" className="text-xl font-semibold">
+                    Login
+                  </Link>
                 </li>
               ) : (
                 <li>
-                  <a className="text-xl font-semibold" onClick={() => signOut(auth)}>Logout</a>
+                  <a
+                    className="text-xl font-semibold"
+                    onClick={() => signOut(auth)}
+                  >
+                    Logout
+                  </a>
                 </li>
               )}
             </ul>
           </div>
           <div className="navbar-end">
-            <span className="cart-icon">
-              <FaShoppingCart />
+            <span className="cart-icon flex">
+              <Link to="/cart" className='flex items-center'>
+                <span>
+                  {" "}
+                  <FaShoppingCart />
+                </span>
+                <span>{state.length}</span>
+              </Link>
             </span>
             <span className="cart-icon">
               <Link to="/register">

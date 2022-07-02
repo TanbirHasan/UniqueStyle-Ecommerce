@@ -12,6 +12,9 @@ import Login from './pages/Login';
 import ProductDetails from './components/ProductDetails';
 import Categorylist from './components/Categorylist';
 import Product from './components/Product';
+import RequireAuth from "./RequireAuth"
+import Checkout from './pages/Checkout';
+
 
 
 function App() {
@@ -27,9 +30,10 @@ function App() {
           element={<Categorylist />}
         ></Route>
         <Route path="/cart" element={<Cart />}></Route>
-        <Route path="/product/:id" element={<Product/>}></Route>
+        <Route path="/product/:id" element={<Product />}></Route>
 
         <Route path="/register" element={<Register />}></Route>
+        <Route path="/checkout" element={<Checkout />}></Route>
         <Route path="/login" element={<Login />}></Route>
       </Routes>
     </div>

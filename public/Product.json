@@ -57,5 +57,52 @@
         "price" : "1200",
         "categories" : "Shoes"
         
+    },
+
+
+
+
+
+
+    {
+             
+         "img" : "https://i.ibb.co/CMsgfnL/shoes1.webp",
+        "title" : "Icon Canvas Shoes For Men  ",
+        "desc" : "100% Original Product",
+        "size" : ["38","39","40"],
+        "color" : ["Black","White"],
+        "price" : "1200",
+        "categories" : "Shoes"
+        
+    },
+
+        {
+             
+         "img" : "https://i.ibb.co/mHFkXrL/shoes2.webp",
+        "title" : "Trendy Sports Running Running Shoes For Men",
+        "desc" : "100% Original Product",
+        "size" : ["38","39","40"],
+        "color" : ["Black","Yelow"],
+        "price" : "1400",
+        "categories" : "Shoes"
+        
+    },
+            {
+             
+         "img" : "https://i.ibb.co/cg54PLb/shoes3.webp",
+        "title" : "Canvas Shoes For Men  (White)",
+        "desc" : "100% Original Product",
+        "size" : ["38","39","40"],
+        "color" : ["Black","Yelow"],
+        "price" : "1100",
+        "categories" : "Shoes"
+        
     }
+
+
+ 
+
+
+
+
 ]
