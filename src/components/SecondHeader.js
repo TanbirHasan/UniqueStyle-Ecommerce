@@ -1,16 +1,22 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 const SecondHeader = () => {
     return (
       <div className="my-10 border-b-4">
-        <h2 className='text-2xl bold text-center my-10'>Explore Our Products</h2>
+        <h2 className="text-2xl bold text-center my-10">
+          Explore Our Products
+        </h2>
         <div className="flex justify-evenly">
           <div className="flex flex-col justify-center items-center">
-            <img
-              src="https://i.ibb.co/jMLrFWh/headerelectronicsimage.jpg"
-              alt="electronics"
-              style={{ height: "100px", width: "150px" }}
-            />
+            <Link to="/electronicproducts">
+              <img
+                src="https://i.ibb.co/jMLrFWh/headerelectronicsimage.jpg"
+                alt="electronics"
+                style={{ height: "100px", width: "150px" }}
+              />
+            </Link>
+
             <h3>Electronics</h3>
           </div>
           <div className="flex flex-col justify-center items-center">

@@ -14,6 +14,7 @@ import Categorylist from './components/Categorylist';
 import Product from './components/Product';
 import RequireAuth from "./RequireAuth"
 import Checkout from './pages/Checkout';
+import ElectronicProduct from './components/ElectronicProduct';
 
 
 
@@ -33,6 +34,7 @@ function App() {
         <Route path="/product/:id" element={<Product />}></Route>
 
         <Route path="/register" element={<Register />}></Route>
+        <Route path="/electronicproducts" element={<ElectronicProduct />}></Route>
         <Route path="/checkout" element={<Checkout />}></Route>
         <Route path="/login" element={<Login />}></Route>
       </Routes>

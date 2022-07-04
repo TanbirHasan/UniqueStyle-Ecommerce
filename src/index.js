@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from 'react-redux';
 import store from "./redux/store"
+import styles from "react-responsive-carousel/lib/styles/carousel.min.css";
 
 
 
@@ -19,6 +20,7 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

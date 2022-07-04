@@ -12,92 +12,84 @@
         
 
     },
-      {
-     
-       
-        "img" : "https://i.ibb.co/Ss23mYw/thisrt4.webp",
-        "title" : "Puma Round Neck T-shirt",
-        "desc" : "100% Original Product",
-        "size" : ["XL","M","L"],
-        "color" : ["White","Black","Olive"],
-        "price" : "320",
-        "categories" : "Tshirt"
-        
-
-    },
-    {
-        
-         "img" : "https://i.ibb.co/T1BXHvH/top5.webp",
-        "title" : "Casual Cutout Solid Women Top",
-        "desc" : "100% Original Product",
-        "size" : ["XL","M","L"],
-        "color" : ["Red","Black","Olive"],
-        "price" : "520",
-        "categories" : "Womenstop",
-        "inStock" : "true"
-    },
-        {
-            
-         "img" : "https://i.ibb.co/qC2MvMX/top3.webp",
-        "title" : "Casual Regular Sleeves Solid Women Top",
-        "desc" : "100% Original Product",
-        "size" : ["XL","M","L"],
-        "color" : ["Red","Black","Olive"],
-        "price" : "580",
-        "categories" : "Womenstop"
-        
-    },
-         {
-             
-         "img" : "https://i.ibb.co/qD87hB0/Shoes.webp",
-        "title" : "EDOAR Running Shoes ",
-        "desc" : "100% Original Product",
-        "size" : ["38","39","40"],
-        "color" : ["Black","Olive"],
-        "price" : "1200",
-        "categories" : "Shoes"
-        
-    },
-
-
-
-
 
 
     {
-             
-         "img" : "https://i.ibb.co/CMsgfnL/shoes1.webp",
-        "title" : "Icon Canvas Shoes For Men  ",
-        "desc" : "100% Original Product",
-        "size" : ["38","39","40"],
-        "color" : ["Black","White"],
-        "price" : "1200",
-        "categories" : "Shoes"
-        
+        "variant" : ["4+64","6+128"],
+        "title" : "Xioami redmi note 11",
+        "img":"https://i.ibb.co/ssLPkf1/Xiaomi-Redmi-Note-11-Polar-White.jpg",
+        "categories":"SmartPhones",
+        "desc":"Xiaomi Redmi Note 11 phone has a quad-camera setup on the back. This formation consists of a 50MP wide, 8MP ultrawide, 2MP macro, 2MP depth camera. It has a 13MP selfie camera inside the punch hole of the display. The video recording capability is 4K@30fps, 1080p@30/60fps. Its RAM and ROM have two (64/128GB/4/6GB) variants. On the other hand, it can not support microSDXC on using a shared SIM slot. Certainly, Redmi Note 11 has a 5000mAh battery with 33W fast charging. It has a dual nano-SIM card slot. That is to say, Redmi Note 11 is 2G/3G/4G/5G supportable.",
+        "released":"2022,Feb 09",
+        "os" : "Andriod 11,MIUI 13",
+        "display" : "6.43'",
+        "camera":"50Mp",
+        "ram" :"4/6",
+        "battery":"5000mah",
+        "processor":"Snapdragon 680 4g",
+        "price":"16000"
+
+
+
     },
 
-        {
-             
-         "img" : "https://i.ibb.co/mHFkXrL/shoes2.webp",
-        "title" : "Trendy Sports Running Running Shoes For Men",
-        "desc" : "100% Original Product",
-        "size" : ["38","39","40"],
-        "color" : ["Black","Yelow"],
-        "price" : "1400",
-        "categories" : "Shoes"
-        
+
+     {
+        "variant" : ["6+64","6+128","8+128"],
+        "title" : "One Plus Nord CE 2 5g",
+        "img":"https://i.ibb.co/2795qcr/One-Plus-Nord-CE-2-5-G-Gray-Mirror.jpg",
+        "categories":"SmartPhones",
+        "desc":"The OnePlus Nord CE2 5G is now available in two variants (128GB/6/8GB RAM). Now, the OnePlus Nord CE2 5G’s Price is 35990 Taka in Bangladesh. Nord CE2 5G has a 4500 mAh battery with 65W fast charging. This device is running with Android 11 and powered by the MediaTek MT6877 Dimensity 900 5G (6 nm) chipset.",
+        "released":"2022,Feb 22",
+        "os" : "Andriod 11,OxygenOs 11",
+        "display" : "6.43'",
+        "camera":"64Mp",
+        "ram" :"6/8",
+        "battery":"5000mah",
+        "processor":"Dimensity 900 5g",
+        "price" : "35000"
+
+
+
     },
-            {
-             
-         "img" : "https://i.ibb.co/cg54PLb/shoes3.webp",
-        "title" : "Canvas Shoes For Men  (White)",
-        "desc" : "100% Original Product",
-        "size" : ["38","39","40"],
-        "color" : ["Black","Yelow"],
-        "price" : "1100",
-        "categories" : "Shoes"
-        
+     {
+        "variant" : ["6+64","6+128","8+128"],
+        "title" : "Xioami 12s",
+        "img":"https://i.ibb.co/gwf3N97/Xiaomi-12-Gray.jpg",
+        "categories":"SmartPhones",
+        "desc":"The Xiaomi 12S is now available in two variants (128/256GB/8/12GB RAM). Now, Xiaomi 12S’s Price is coming to Taka in Bangladesh. 12S has a 4500mAh battery with 67W fast charging. This device is running with Android 12 and powered by the Qualcomm SM8450 Snapdragon 8+ Gen 1 (4 nm) chipset.",
+        "released":"2022,Feb 22",
+        "os" : "Andriod 11,MIUI 13",
+        "display" : "6.28'",
+        "camera":"64Mp",
+        "ram" :"6/8",
+        "battery":"5500mah",
+        "processor":"Snapdragon 8+ Gen 1",
+        "price":"45000"
+
+
+
+    },
+     {
+        "variant" : ["6+64","6+128","8+128"],
+        "title" : "Nothing Phone (1)",
+        "img":"https://i.ibb.co/HNdbxQs/Nothing-Phone-1-1.jpg",
+        "categories":"SmartPhones",
+        "desc":"The Xiaomi 12S is now available in two variants (128/256GB/8/12GB RAM). Now, Xiaomi 12S’s Price is coming to Taka in Bangladesh. 12S has a 4500mAh battery with 67W fast charging. This device is running with Android 12 and powered by the Qualcomm SM8450 Snapdragon 8+ Gen 1 (4 nm) chipset.",
+        "released":"2022,July 12",
+        "os" : "Andriod 11,Nothing Os",
+        "display" : "6.28'",
+        "camera":"64Mp",
+        "ram" :"6/8",
+        "battery":"4500mah",
+        "processor":"Snapdragon 778",
+        "price":"45000"
+
+
+
     }
+
+
 
 
  
