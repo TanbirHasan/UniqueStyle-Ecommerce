@@ -20,19 +20,25 @@ const SecondHeader = () => {
             <h3>Electronics</h3>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <img
-              src="https://i.ibb.co/Fqdvf0Z/headerfahionimage.png"
-              alt="fashion"
-              style={{ height: "100px", width: "150px" }}
-            />
+            <Link to="/fashionproducts">
+              <img
+                src="https://i.ibb.co/Fqdvf0Z/headerfahionimage.png"
+                alt="fashion"
+                style={{ height: "100px", width: "150px" }}
+              />
+            </Link>
+
             <h3>Fashion</h3>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <img
-              src="https://i.ibb.co/nPY2L8h/homedecor.jpg"
-              alt="home"
-              style={{ height: "100px", width: "150px" }}
-            />
+            <Link to="/homedecorproducts">
+              <img
+                src="https://i.ibb.co/nPY2L8h/homedecor.jpg"
+                alt="home"
+                style={{ height: "100px", width: "150px" }}
+              />
+            </Link>
+
             <h3>Home-Decor</h3>
           </div>
         </div>

@@ -32,63 +32,179 @@
 
 
     },
+    {
+        "title":"Flower Shape Metal Body with White Stone Design Wall Clock",
+        "desc":"Total Diameter: 23.7 Inches,White color  stone,Metal body,",
+        "price":"2,790.00",
+        "img":"https://i.ibb.co/x3Z9sqs/Flower-Shape-Metal-Body-with-White-Stone-Design-Wall-Clock.webp",
+        "categories":["wallclock,clock,homedecor"]
+    },
+       {
+        "title":"Black & Golden Color Metal Body Ginkgo Leaf Design Wall Clock",
+        "desc":"Total Width: 26.2 Inches,Total Height: 22.5 Inches;Metal body,",
+        "price":"4,490.00",
+        "img":"https://i.ibb.co/gvpnT0V/WC206-Black-Golden-Color-Metal-Body-Ginkgo-Leaf-Design-Wall-Clock-2.jpg",
+          "categories":["wallclock,clock,homedecor"]
+    },
+       {
+        "title":"Golden Design Color Fiber Body White Dial Diling Wall Clock",
+        "desc":"Total Clock Diameter: 17.5 Inches,White color  stone,Metal body,",
+        "price":"3,250.00",
+        "img":"https://i.ibb.co/gvpnT0V/WC206-Black-Golden-Color-Metal-Body-Ginkgo-Leaf-Design-Wall-Clock-2.jpg",
+          "categories":["wallclock,clock,homedecor"]
+    },
+    {
+         "title":"Ceramic Body with Green Color Plastic Paper Shade Vintage Table Lamp",
+        "desc":"Total Height: 14.5 Inches,Shade Height: 6.5 Inches,Body Width: 4.8 Inches",
+        "price":"1,690.00",
+        "img":"https://i.ibb.co/XSG0GrJ/Ceramic-Body-with-Green-Color-Plastic-Paper-Shade-Vintage-Table-Lamp-1-1.webp",
+        "categories":["table-lamp,homedecor"]
 
+    },
+    {
+         "title":"TL112 – Crystal Stone Design Golden Color Metal Body With White Golden Designed Shade Table Lamp",
+        "desc":"Total Height= 15.3 Inches,Shade Height= 7.5 Inches,Shade Width= 10 Inches",
+        "price":"2,490.00",
+        "img":"https://i.ibb.co/BwjDkYB/Crystal-Stone-Design-Golden-Color-Metal-Body-With-White-Golden-Designed-Shade-Table-Lamp-cyl-1.webp",
+        "categories":["table-lamp,homedecor"]
 
-     {
-        "variant" : ["6+64","6+128","8+128"],
-        "title" : "One Plus Nord CE 2 5g",
-        "img":"https://i.ibb.co/2795qcr/One-Plus-Nord-CE-2-5-G-Gray-Mirror.jpg",
-        "categories":"SmartPhones",
-        "desc":"The OnePlus Nord CE2 5G is now available in two variants (128GB/6/8GB RAM). Now, the OnePlus Nord CE2 5G’s Price is 35990 Taka in Bangladesh. Nord CE2 5G has a 4500 mAh battery with 65W fast charging. This device is running with Android 11 and powered by the MediaTek MT6877 Dimensity 900 5G (6 nm) chipset.",
-        "released":"2022,Feb 22",
-        "os" : "Andriod 11,OxygenOs 11",
-        "display" : "6.43'",
-        "camera":"64Mp",
-        "ram" :"6/8",
-        "battery":"5000mah",
-        "processor":"Dimensity 900 5g",
-        "price" : "35000"
+    },
+       {
+         "title":"Golden Color Metal Body With Crystal Stone With Cream Color Shade Table Lamp",
+        "desc":"Height:19.7 inches,Shade Width: 12 inches,Shade Width= 10 Inches",
+        "price":"3,500.00",
+        "img":"ttps://i.ibb.co/NKz54nv/Golden-Color-Metal-Body-With-Crystal-Stone-With-Cream-Color-Shade-Table-Lamp-2-1.jpg",
+        "categories":["table-lamp,homedecor"]
 
+    },
+    {
+         "title":"Golden Color Flower And Stone Design Metal Body Wall Art Wall Decor",
+        "desc":"Height:19.7 inches,Total Height: 37.3 Inches,Very High Quality Finishing",
+        "price":"2,980.00",
+        "img":"https://i.ibb.co/2YPs64k/Golden-Color-Flower-And-Stone-Design-Metal-Body-Wall-Art-Wall-Decor-2.webp",
+        "categories":["wall-art,homedecor"]
+    },
+    {
+          "title":"Rose Gold Color Diamond Cut Stone Design Metal Body Wall Art Wall Decor",
+        "desc":"Total Width: 13.6 inches,Total Height: 37.2 Inches,Very High Quality Finishing",
+        "price":"2,950.00",
+        "img":"https://i.ibb.co/092hH1h/Rose-Gold-Color-Diamond-Cut-Stone-Design-Metal-Body-Wall-Art-Wall-Decor-2.webp",
+        "categories":["wall-art,homedecor"]
 
+    },
+    {
+           "title":"Multi-Color Glass Design Mosaic Turkish Table Lamp",
+        "desc":"Total Height: 14 Inches,Lamp Diameter: 6 Inches,Glass made Lamp",
+        "price":"2,950.00",
+        "img":"https://i.ibb.co/RTbj9dq/Multi-Color-Glass-Design-Mosaic-Turkish-Jug-Style-Table-Lamp-3.webp",
+        "categories":["table-lamp,homedecor"]
+    },
+        {
+           "title":"Multi-Color Glass Design Mosaic Turkish Jug Style Table Lamp",
+        "desc":"Total Height: 15 Inches,Lamp Diameter: 5.2 Inches,Glass made Lamp",
+        "price":"2,950.00",
+        "img":"https://i.ibb.co/m9N1Yz8/Multi-Color-Glass-Design-Mosaic-Turkish-Table-Lamp-TL103-5.webp",
+        "categories":["table-lamp,homedecor"]
+    },
+    {
+             "title":"Twin Bell Silver Color Blue Dial Vintage Alarm Clock",
+        "desc":"Dial diameter= 4 Inches,Total height=6.5 Inches,Metal body",
+        "price":"950.00",
+        "img":"https://i.ibb.co/0n7dcv3/WC32-New-Twin-Bell-Silver-Color-Blue-Dial-Vintage-Alarm-Clock-1.webp",
+        "categories":["table-clock,clock,homedecor"]
+
+    },
+       {
+             "title":"White Color Hexagonal Ceramic Pot With Wooden Air Tight Lid 3 Pieces Storage Jar",
+        "desc":"Pot Width: 6 Inches,Large Height: 7.5 Inches,Medium Height: 6 Inches",
+        "price":"3550.00",
+        "img":"https://i.ibb.co/r5ZwZyc/White-Color-Hexagonal-Ceramic-Pot-With-Wooden-Air-Tight-Lid-3-Pieces-Storage-Jar-1-1.webp",
+        "categories":["kitchen,homedecor"]
 
     },
      {
-        "variant" : ["6+64","6+128","8+128"],
-        "title" : "Xioami 12s",
-        "img":"https://i.ibb.co/gwf3N97/Xiaomi-12-Gray.jpg",
-        "categories":"SmartPhones",
-        "desc":"The Xiaomi 12S is now available in two variants (128/256GB/8/12GB RAM). Now, Xiaomi 12S’s Price is coming to Taka in Bangladesh. 12S has a 4500mAh battery with 67W fast charging. This device is running with Android 12 and powered by the Qualcomm SM8450 Snapdragon 8+ Gen 1 (4 nm) chipset.",
-        "released":"2022,Feb 22",
-        "os" : "Andriod 11,MIUI 13",
-        "display" : "6.28'",
-        "camera":"64Mp",
-        "ram" :"6/8",
-        "battery":"5500mah",
-        "processor":"Snapdragon 8+ Gen 1",
-        "price":"45000"
-
-
+             "title":"Teal and White Color Ceramic 4 Pieces Home Jar with Tray",
+        "desc":"Tray Length: 16 inch,Tray Width: 4.5 inch,Jar Height: 4.4 inch",
+        "price":"2990.00",
+        "img":"https://i.ibb.co/FzcmN4d/Teal-Color-Stone-Design-Ceramic-3-Pieces-Bathroom-Set-1.webp",
+        "categories":["kitchen,homedecor"]
 
     },
-     {
-        "variant" : ["6+64","6+128","8+128"],
-        "title" : "Nothing Phone (1)",
-        "img":"https://i.ibb.co/HNdbxQs/Nothing-Phone-1-1.jpg",
-        "categories":"SmartPhones",
-        "desc":"The Xiaomi 12S is now available in two variants (128/256GB/8/12GB RAM). Now, Xiaomi 12S’s Price is coming to Taka in Bangladesh. 12S has a 4500mAh battery with 67W fast charging. This device is running with Android 12 and powered by the Qualcomm SM8450 Snapdragon 8+ Gen 1 (4 nm) chipset.",
-        "released":"2022,July 12",
-        "os" : "Andriod 11,Nothing Os",
-        "display" : "6.28'",
-        "camera":"64Mp",
-        "ram" :"6/8",
-        "battery":"4500mah",
-        "processor":"Snapdragon 778",
-        "price":"45000"
+         {
+             "title":"Teal Color Stone Design Ceramic 3 Pieces Jar Set",
+        "desc":"Total Width: 11.5 Inches,Jar Height: 3.5 Inches,Jar Width: 3.5 Inches",
+        "price":"2250.00",
+        "img":"https://i.ibb.co/FzcmN4d/Teal-Color-Stone-Design-Ceramic-3-Pieces-Bathroom-Set-1.webp",
+        "categories":["kitchen,homedecor"]
 
+    },
+    {
+        "title":"W32D120G (813mm) HD ANDROID TV",
+        "categories":["tv,electronics"],
+        "img":"https://i.ibb.co/ggcVHTf/walton-Android43.jpg",
+        "desc":"Android 9.0,Screen Size: 813mm,Aspect ratio: 4:3, 14:9, 16:9, Auto,Resolution: 1366 X 768,Viewing angle: H 1780/V 1780",
+        "price":"29,990"
+    },
+        {
+        "title":"W32D120HG1 (813mm) HD ANDROID TV",
+        "categories":["tv,electronics"],
+        "img":"https://i.ibb.co/GRHdXRy/Walton-Android-Tv.jpg",
+        "desc":"Android 9.0,Screen Size: 813mm,Aspect ratio: 16:9, Viewing angle: H 1780/V 1780, 16:9, Auto,Resolution: 1366 X 768,Viewing angle: H 1780/V 1780",
+        "price":"27,990"
+    },
+    {
+         "title":"Vision 32 LED TV E30 Android Smart Infinity",
+        "categories":["tv,electronics"],
+        "img":"https://i.ibb.co/StWTwn3/visiion-X40.png",
+        "desc":"Official Android 9.0 with Google Authorization,Google assistant as AI., Authorized Netflix;,Voice controlled TV with Google Assistant, VA Panel technology,Resolution: 1366 X 768, Contrast ratio 3000:1;",
+        "price":"23,890"
 
+    },
+        {
+         "title":"Vision 50 LED TV Google Android 4K G3S Galaxy Pro",
+        "categories":["tv,electronics"],
+        "img":"https://i.ibb.co/68940Vw/VSN-50-LED-G3-S-Pro-800x800pxl-o82y-ht.jpg",
+        "desc":"Far Field Voice Control. ,Google assistant as AI., Official Android  10.0 with  Google Authorization,Voice controlled TV with Google Assistant. Voice controlled TV with Google Assistant. , Panel Type: DLED, Contrast ratio 6000:1;",
+        "price":"60,590"
+
+    },
+            {
+         "title":"Samsung Bottom Mount Refrigerator | RB21KMFH5RH/D3 | 215 ℓ",
+        "categories":["refrigerator,electronics"],
+        "img":"https://i.ibb.co/nQZ3yht/Samsung-bottom-mount-ref.webp",
+        "desc":"Effortless control. ,More freezer space. Strong self shalves . Voice controlled TV with Google Assistant , R-600a refrigerant ",
+        "price":"40,890"
+
+    },
+       {
+         "title":"Samsung Bottom Mount Freezer | RB21KMFH5UT/D3 | 218 L",
+        "categories":["refrigerator,electronics"],
+        "img":"https://i.ibb.co/KDPbNcn/Samsung-Bottommount.webp",
+        "desc":"Works longer, quieter & uses less energyInstant information & effortless control,Strong self shalves . Strong, safe shelves and more freezer space ,Gross capacity: 218 L",
+        "price":"40,900"
+
+    },
+      {
+         "title":"Walton WFK-3G0-GDEL-XX",
+        "categories":["refrigerator,electronics"],
+        "img":"https://i.ibb.co/kQHH7gg/waltonref2.jpg",
+        "desc":"Type: Direct Cool,Door: Glass Door,Gross Volume: 370 Ltr, Net Volume: 367 Ltr ,Special Technoloty: Nano helth care",
+        "price":"40,900"
+
+    },
+        {
+         "title":"Walton WFC-3F5-GDEH-DD (Inverter)",
+        "categories":["refrigerator,electronics"],
+        "img":"https://i.ibb.co/bKsNmXk/waltonref1.jpg",
+        "desc":"Type: Direct Cool,Door: Glass Door,Gross Volume: 370 Ltr, Net Volume: 367 Ltr ,Using Latest Intelligent INVERTER technology",
+        "price":"48,990"
 
     }
+        
+    
 
+
+    
 
 
 

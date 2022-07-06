@@ -1,8 +1,74 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useSelector } from 'react-redux';
 
 const Checkout = () => {
-    const state = useSelector((state) => state.handleCart)
+
+   const firstnameref = useRef();
+   const secondnameref = useRef();
+   const emailref = useRef();
+   const addressref = useRef();
+   const cityref = useRef();
+   const postcoderef = useRef();
+   const noteseref = useRef();
+    
+    const state = useSelector((state) => state.handleCart);
+    console.log(state);
+
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const firstname = firstnameref.current.value;
+        const lastname = secondnameref.current.value;
+        const email = emailref.current.value;
+        const address = addressref.current.value;
+        const city = cityref.current.value;
+        const postcode = postcoderef.current.value;
+        const notes = noteseref.current.value;
+        const products = state;
+    
+
+
+        const Allinformation = {
+          firstname,
+          lastname,
+          email,
+          address,
+          city,
+          postcode,
+          notes,
+          products,
+        };
+          console.log(Allinformation);
+           const url = "http://localhost:8000/api/orders";
+
+           fetch(url, {
+             method: "POST",
+             headers: {
+               "content-type": "application/json",
+             },
+             body: JSON.stringify(Allinformation),
+           })
+             .then((res) => res.json())
+             .then((result) => {
+               console.log(result);
+               alert("Your Order Placed Successfully");
+               if(result){
+
+               }
+             });
+
+    firstnameref.current.value = " ";
+    secondnameref.current.value = " ";
+    cityref.current.value = " ";
+    addressref.current.value = " ";
+    postcoderef.current.value = " ";
+    noteseref.current.value = " ";
+    emailref.current.value = " ";
+
+
+
+
+    }
 
 
 
@@ -42,19 +108,19 @@ const Checkout = () => {
                 <div class="flex flex-col md:w-full">
                     <h2 class="mb-4 font-bold md:text-xl text-heading ">Shipping Address
                     </h2>
-                    <form class="justify-center w-full mx-auto" method="post" action>
+                    <form class="justify-center w-full mx-auto" onSubmit={(e) => handleSubmit(e)}>
                         <div class="">
                             <div class="space-x-0 lg:flex lg:space-x-4">
                                 <div class="w-full lg:w-1/2">
                                     <label for="firstName" class="block mb-3 text-sm font-semibold text-gray-500">First
                                         Name</label>
-                                    <input name="firstName" type="text" placeholder="First Name"
+                                    <input name="firstName" ref={firstnameref} type="text" placeholder="First Name"
                                         class="w-full px-4 py-3 text-sm border border-gray-300 rounded lg:text-sm focus:outline-none focus:ring-1 focus:ring-blue-600"/>
                                 </div>
                                 <div class="w-full lg:w-1/2 ">
                                     <label for="firstName" class="block mb-3 text-sm font-semibold text-gray-500">Last
                                         Name</label>
-                                    <input name="Last Name" type="text" placeholder="Last Name"
+                                    <input name="Last Name" ref={secondnameref} type="text" placeholder="Last Name"
                                         class="w-full px-4 py-3 text-sm border border-gray-300 rounded lg:text-sm focus:outline-none focus:ring-1 focus:ring-blue-600"/>
                                 </div>
                             </div>
@@ -62,7 +128,7 @@ const Checkout = () => {
                                 <div class="w-full">
                                     <label for="Email"
                                         class="block mb-3 text-sm font-semibold text-gray-500">Email</label>
-                                    <input name="Last Name" type="text" placeholder="Email"
+                                    <input name="Last Name" ref={emailref} type="text" placeholder="Email"
                                         class="w-full px-4 py-3 text-sm border border-gray-300 rounded lg:text-sm focus:outline-none focus:ring-1 focus:ring-blue-600"/>
                                 </div>
                             </div>
@@ -70,7 +136,7 @@ const Checkout = () => {
                                 <div class="w-full">
                                     <label for="Address"
                                         class="block mb-3 text-sm font-semibold text-gray-500">Address</label>
-                                    <textarea
+                                    <textarea ref={addressref}
                                         class="w-full px-4 py-3 text-xs border border-gray-300 rounded lg:text-sm focus:outline-none focus:ring-1 focus:ring-blue-600"
                                         name="Address" cols="20" rows="4" placeholder="Address"></textarea>
                                 </div>
@@ -79,13 +145,13 @@ const Checkout = () => {
                                 <div class="w-full lg:w-1/2">
                                     <label for="city"
                                         class="block mb-3 text-sm font-semibold text-gray-500">City</label>
-                                    <input name="city" type="text" placeholder="City"
+                                    <input name="city" ref={cityref} type="text" placeholder="City"
                                         class="w-full px-4 py-3 text-sm border border-gray-300 rounded lg:text-sm focus:outline-none focus:ring-1 focus:ring-blue-600"/>
                                 </div>
                                 <div class="w-full lg:w-1/2 ">
                                     <label for="postcode" class="block mb-3 text-sm font-semibold text-gray-500">
                                         Postcode</label>
-                                    <input name="postcode" type="text" placeholder="Post Code"
+                                    <input name="postcode" ref={postcoderef} type="text" placeholder="Post Code"
                                         class="w-full px-4 py-3 text-sm border border-gray-300 rounded lg:text-sm focus:outline-none focus:ring-1 focus:ring-blue-600"/>
                                 </div>
                             </div>
@@ -98,12 +164,12 @@ const Checkout = () => {
                             <div class="relative pt-3 xl:pt-6"><label for="note"
                                     class="block mb-3 text-sm font-semibold text-gray-500"> Notes
                                     (Optional)</label><textarea name="note"
-                                    class="flex items-center w-full px-4 py-3 text-sm border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-600"
+                                    ref={noteseref} class="flex items-center w-full px-4 py-3 text-sm border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-600"
                                     rows="4" placeholder="Notes for delivery"></textarea>
                             </div>
                             <div class="mt-4">
                                 <button
-                                    class="w-full px-6 py-2 text-blue-200 bg-blue-600 hover:bg-blue-900">Process</button>
+                                    class="w-full px-6 py-2 text-blue-200 bg-blue-600 hover:bg-blue-900"  type="submit">Process</button>
                             </div>
                         </div>
                     </form>

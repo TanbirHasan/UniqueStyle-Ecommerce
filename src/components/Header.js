@@ -107,12 +107,13 @@ const Header = () => {
           </div>
           <div className="navbar-end">
             <span className="cart-icon flex">
-              <Link to="/cart" className='flex items-center'>
+              <Link to="/cart" className="flex items-center">
                 <span>
                   {" "}
                   <FaShoppingCart />
                 </span>
-                <span>{state.length}</span>
+                <span class="badge">{state.length}</span>
+              
               </Link>
             </span>
             <span className="cart-icon">

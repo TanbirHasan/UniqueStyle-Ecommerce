@@ -7,9 +7,9 @@ const Categorylist = () => {
      const cat = location.pathname.split("/")[2];
      console.log(cat)
     return (
-        <div>
+        <div className='my-10'>
 
-            <h3>Category is : {cat}</h3>
+         
             <Products cat={cat}/>
             
         </div>
