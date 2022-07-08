@@ -7,18 +7,22 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from 'react-redux';
 import store from "./redux/store"
 import styles from "react-responsive-carousel/lib/styles/carousel.min.css";
+import { QueryClient, QueryClientProvider, useQuery } from "react-query";
+const queryClient = new QueryClient();
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </BrowserRouter>
-  </React.StrictMode>
+  <QueryClientProvider client={queryClient}>
+    <React.StrictMode>
+      <BrowserRouter>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </BrowserRouter>
+    </React.StrictMode>
+  </QueryClientProvider>
 );
 
 

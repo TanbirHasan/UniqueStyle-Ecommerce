@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 
 const FashionProduct = () => {
      const [product, setProduct] = useState([]);
+       const [productitem, setProductitem] = useState("fashion");
 
      useEffect(() => {
-       fetch(`http://localhost:8000/api/products?categories=Fashion`)
+       fetch(`http://localhost:9500/products?categories=${productitem}`)
          .then((res) => res.json())
          .then((data) => setProduct(data));
      }, []);

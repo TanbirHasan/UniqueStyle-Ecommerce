@@ -87,6 +87,12 @@ const Header = () => {
               <li>
                 <a className="text-xl font-semibold">Products</a>
               </li>
+              <Link to="/dashboard">
+                <li>
+                  <a className="text-xl font-semibold">Dashboard</a>
+                </li>
+              </Link>
+
               {!user ? (
                 <li>
                   <Link to="/login" className="text-xl font-semibold">
@@ -113,7 +119,6 @@ const Header = () => {
                   <FaShoppingCart />
                 </span>
                 <span class="badge">{state.length}</span>
-              
               </Link>
             </span>
             <span className="cart-icon">

@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import {
   useSignInWithGoogle,
   useSendPasswordResetEmail,
 
   useCreateUserWithEmailAndPassword,
+  useUpdateProfile,
 } from "react-firebase-hooks/auth";
 import auth from '../firebase.config';
  import { Formik } from "formik";
@@ -13,12 +14,13 @@ import validate from '../components/Validate';
 const Register = () => {
 
   const navigate  = useNavigate()
+   const [displayName, setDisplayName] = useState("");
   const [signInWithGoogle, guser, gloading,gerror] = useSignInWithGoogle(auth);
 const [createUserWithEmailAndPassword, user, loading, error] =
   useCreateUserWithEmailAndPassword(auth);
- 
+   const [updateProfile, updating, updateerror] = useUpdateProfile(auth);
 
-  if (loading || gloading ) {
+  if (loading || gloading || updating ) {
     return <span>loading</span>;
   }
   if (user) {
@@ -83,11 +85,18 @@ const [createUserWithEmailAndPassword, user, loading, error] =
 
             console.log(values.email)
             console.log(values.password)
+            console.log(values.firstName)
+            setDisplayName(values.firstName);
+            console.log(displayName);
           
           setTimeout(() => {
 
 
+
+
+              
              createUserWithEmailAndPassword(values.email, values.password);
+             updateProfile(  displayName );
             setSubmitting(true);
             
 

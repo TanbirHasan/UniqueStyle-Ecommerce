@@ -17,6 +17,10 @@ import Checkout from './pages/Checkout';
 import ElectronicProduct from './components/ElectronicProduct';
 import FashionProduct from './components/FashionProduct';
 import HomedecorProducts from './components/HomedecorProducts';
+import Dashboard from './pages/Dashboard';
+import Myprofile from './components/Myprofile';
+import MyOrder from './components/MyOrder';
+import Payment from './components/Payment';
 
 
 
@@ -34,6 +38,12 @@ function App() {
         ></Route>
         <Route path="/cart" element={<Cart />}></Route>
         <Route path="/product/:id" element={<Product />}></Route>
+        <Route path="/dashboard" element={<Dashboard />}>
+          <Route index element={<Myprofile />}></Route>
+
+          <Route path="orders" element={<MyOrder />}></Route>
+          <Route path="payment/:id" element={<Payment />}></Route>
+        </Route>
 
         <Route path="/register" element={<Register />}></Route>
         <Route

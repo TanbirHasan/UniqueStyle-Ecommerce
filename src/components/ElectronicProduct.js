@@ -10,7 +10,7 @@ const ElectronicProduct = () => {
       };
 
     useEffect(() => {
-        fetch(`http://localhost:8000/api/products?categories=${productitem}`)
+        fetch(`http://localhost:9500/products?categories=${productitem}`)
           .then((res) => res.json())
           .then((data) => setProduct(data));  
     }, [product])

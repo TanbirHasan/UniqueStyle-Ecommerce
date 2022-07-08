@@ -34,3 +34,7 @@
    width:100px;
    height: 130px;
  }
+
+ .card-body{
+  align-items: start;
+ }

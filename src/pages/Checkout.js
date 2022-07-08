@@ -1,11 +1,15 @@
 import React, { useRef } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useSelector } from 'react-redux';
+import auth from '../firebase.config';
 
 const Checkout = () => {
 
+    const [user] = useAuthState(auth)
+
    const firstnameref = useRef();
    const secondnameref = useRef();
-   const emailref = useRef();
+ 
    const addressref = useRef();
    const cityref = useRef();
    const postcoderef = useRef();
@@ -19,12 +23,13 @@ const Checkout = () => {
         e.preventDefault();
         const firstname = firstnameref.current.value;
         const lastname = secondnameref.current.value;
-        const email = emailref.current.value;
+        const email = user.email;
         const address = addressref.current.value;
         const city = cityref.current.value;
         const postcode = postcoderef.current.value;
         const notes = noteseref.current.value;
         const products = state;
+        const productprice = total;
     
 
 
@@ -37,9 +42,10 @@ const Checkout = () => {
           postcode,
           notes,
           products,
+          productprice,
         };
           console.log(Allinformation);
-           const url = "http://localhost:8000/api/orders";
+           const url = "http://localhost:9500/order";
 
            fetch(url, {
              method: "POST",
@@ -63,7 +69,7 @@ const Checkout = () => {
     addressref.current.value = " ";
     postcoderef.current.value = " ";
     noteseref.current.value = " ";
-    emailref.current.value = " ";
+   
 
 
 
@@ -128,7 +134,7 @@ const Checkout = () => {
                                 <div class="w-full">
                                     <label for="Email"
                                         class="block mb-3 text-sm font-semibold text-gray-500">Email</label>
-                                    <input name="Last Name" ref={emailref} type="text" placeholder="Email"
+                                    <input name="Last Name" value={user?.email} type="text" placeholder="Email"
                                         class="w-full px-4 py-3 text-sm border border-gray-300 rounded lg:text-sm focus:outline-none focus:ring-1 focus:ring-blue-600"/>
                                 </div>
                             </div>
