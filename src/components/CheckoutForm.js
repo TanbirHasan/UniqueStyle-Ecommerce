@@ -15,7 +15,7 @@ const CheckoutForm = ({ data }) => {
 
   useEffect(() => {
     fetch(
-      "http://localhost:9500/create-payment-intent",
+      "http://localhost:7000/create-payment-intent",
       {
         method: "POST",
         headers: {
@@ -78,7 +78,7 @@ const CheckoutForm = ({ data }) => {
       data: _id,
       transactionId: paymentIntent.id,
     };
-    fetch(`http://localhost:9500/order/${_id}`, {
+    fetch(`http://localhost:7000/order/${_id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

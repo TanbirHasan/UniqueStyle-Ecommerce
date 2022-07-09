@@ -10,7 +10,7 @@ import { signOut } from "firebase/auth";
 const Header = () => {
 
   const [user] = useAuthState(auth);
-  const state = useSelector((state) => state.handleCart)
+  const state = useSelector((state) => state.addItems)
     return (
       <div>
         <div class="navbar bg-orange-300 py-5 px-10">
@@ -118,11 +118,11 @@ const Header = () => {
                   {" "}
                   <FaShoppingCart />
                 </span>
-                <span class="badge">{state.length}</span>
+                <span class="badge">{state?.length}</span>
               </Link>
             </span>
             <span className="cart-icon">
-              <Link to="/register">
+              <Link to="/dashboard">
                 {" "}
                 <FaUserAlt />
               </Link>

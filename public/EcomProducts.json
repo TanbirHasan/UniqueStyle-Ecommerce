@@ -1,1 +1,77 @@
 
+[
+    {
+        "img":"https://i.ibb.co/zV88njZ/Earwirelessheadphone-Copy.jpg",
+        "title":"Wireless Sukimu Ear Headphone",
+        "review":"4",
+        "price":"1200",
+        "desc":"Designed by Hans J. Wegner in 1949 as one of the first models created especially for Carl Hansen & Son, and produced since 1950. The last of a series of chairs wegner designed based on inspiration from antique Chinese armchairs",
+        "categories":["electronics","headphones","gaming"],
+        "discount":"200 (22%)",
+        "sold":"17",
+        "available":"23"
+
+    },
+     {
+        "img":"https://i.ibb.co/tB4XPky/joystick.jpg",
+        "title":"Wireless Fun Joystick for gameplay",
+        "review":"5",
+        "price":"1700",
+        "desc":"Designed by Hans J. Wegner in 1949 as one of the first models created especially for Carl Hansen & Son, and produced since 1950. The last of a series of chairs wegner designed based on inspiration from antique Chinese armchairs",
+        "categories":["electronics","gaming"],
+        "discount":"400 (30%)",
+          "sold":"11",
+        "available":"10"
+
+    },
+       {
+        "img":"https://i.ibb.co/kJh3bby/samsung-galaxy-s8.jpg",
+        "title":"Samsung Galaxy S8 Plus",
+        "review":"5",
+        "price":"29000",
+        "desc":"Designed by Hans J. Wegner in 1949 as one of the first models created especially for Carl Hansen & Son, and produced since 1950. The last of a series of chairs wegner designed based on inspiration from antique Chinese armchairs",
+        "categories":["electronics","SmartPhones"],
+        "discount":"500 (40%)",
+          "sold":"5",
+        "available":"6",
+         "released":"2017,Feb 22",
+        "os" : "Andriod 8,Sam 13",
+        "display" : "6.5'",
+        "camera":"12Mp",
+        "ram" :"4",
+        "battery":"4000mah",
+        "processor":"Exynos 2500"
+
+    },
+         {
+        "img":"https://i.ibb.co/Xbt7gb2/smartwatch.jpg",
+        "title":"Kels SmartWatch",
+        "review":"5",
+        "price":"3700",
+        "desc":"Designed by Hans J. Wegner in 1949 as one of the first models created especially for Carl Hansen & Son, and produced since 1950. The last of a series of chairs wegner designed based on inspiration from antique Chinese armchairs",
+        "categories":["electronics","watch"],
+        "discount":"200 (10%)",
+          "sold":"3",
+        "available":"20"
+
+    },
+             {
+        "img":"https://i.ibb.co/tsB3xRW/tab.jpg",
+        "title":"Samsung A8 Tab",
+        "review":"5",
+        "price":"25000",
+        "desc":"Designed by Hans J. Wegner in 1949 as one of the first models created especially for Carl Hansen & Son, and produced since 1950. The last of a series of chairs wegner designed based on inspiration from antique Chinese armchairs",
+        "categories":["electronics","SmartPhones"],
+        "discount":"700 (45%)",
+          "sold":"5",
+        "available":"3",
+         "released":"2018,June 10",
+        "os" : "Andriod 8,Sam 13",
+        "display" : "7.0'",
+        "camera":"5Mp",
+        "ram" :"2",
+        "battery":"7000mah",
+        "processor":"Exynos 900"
+
+    }
+]

@@ -15,7 +15,7 @@ const Checkout = () => {
    const postcoderef = useRef();
    const noteseref = useRef();
     
-    const state = useSelector((state) => state.handleCart);
+    const state = useSelector((state) => state.addItems);
     console.log(state);
 
 
@@ -45,7 +45,7 @@ const Checkout = () => {
           productprice,
         };
           console.log(Allinformation);
-           const url = "http://localhost:9500/order";
+           const url = "http://localhost:7000/order";
 
            fetch(url, {
              method: "POST",

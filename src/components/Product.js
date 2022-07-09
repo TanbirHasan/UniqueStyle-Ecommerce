@@ -2,7 +2,7 @@ import axios from 'axios';
 import { itMatchesOne } from 'daisyui/src/lib/postcss-prefixer/utils';
 import React, { useEffect, useState } from 'react';
 import {useLocation} from "react-router-dom"
-import { addCart,delCart } from '../redux/action';
+import {addItem,delItem} from "../redux/action/index"
 import {useSelector, useDispatch } from 'react-redux';
 
 const Product = () => {
@@ -17,7 +17,7 @@ const Product = () => {
      useEffect(() => {
        const getProduct = async () => {
          try {
-           const res = await axios.get(`http://localhost:9500/products/find/${id}`);
+           const res = await axios.get(`http://localhost:7000/products/find/${id}`);
            setProduct(res.data);
          } catch {}
        };
@@ -29,7 +29,7 @@ const Product = () => {
 
      const handleaddCart = (product) => {
     
-          dispatch(addCart(product));
+          dispatch(addItem(product));
         setCartbtn("Remove from Cart")
         
    
@@ -40,7 +40,7 @@ const Product = () => {
      }
 
      const handleremovecart = () => {
-        dispatch(delCart(product));
+        dispatch(delItem(product));
         setCartbtn("Add to Cart");
 
      }
@@ -156,6 +156,9 @@ const Product = () => {
                 </span>
               </div>
               <p class="leading-relaxed">{product.desc}</p>
+              <span class="title-font font-medium text-2xl text-gray-900">
+                Price : {product.price} Taka Only
+              </span>
 
               <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
                 {product.color?.length > 1 ? (
@@ -202,9 +205,6 @@ const Product = () => {
                 </div>
               </div>
               <div class="flex">
-                <span class="title-font font-medium text-2xl text-gray-900">
-               {product.price}
-                </span>
                 <button
                   class="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded"
                   onClick={() => handleaddCart(product)}

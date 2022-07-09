@@ -10,12 +10,12 @@ const ElectronicProduct = () => {
       };
 
     useEffect(() => {
-        fetch(`http://localhost:9500/products?categories=${productitem}`)
+        fetch(`http://localhost:7000/products?categories=${productitem}`)
           .then((res) => res.json())
           .then((data) => setProduct(data));  
     }, [product])
 
-    console.log(product)
+
 
         // useEffect(() => {
         //   fetch(`http://localhost:8000/api/products?categories=${productitem}`)
@@ -25,25 +25,24 @@ const ElectronicProduct = () => {
 
         // console.log(product);
 
-      
-        console.log(productitem);
+
     return (
-      <div>
-        <div className="flex justify-center my-5">
+      <div className="flex">
+        <div className="flex flex-col  my-5">
           <button
-            className="btn btn-primary  mx-2 rounded-none"
+            className="btn btn-primary bg-orange-300 border-none text-black mx-2 rounded-none my-2"
             onClick={() => handleProduct("SmartPhones")}
           >
             Mobile
           </button>
           <button
-            className="btn btn-primary  mx-2 rounded-none"
+            className="btn btn-primary bg-orange-300 border-none text-black  mx-2 rounded-none  my-2"
             onClick={() => handleProduct("tv")}
           >
             Tv
           </button>
           <button
-            className="btn btn-primary  mx-2 rounded-none"
+            className="btn btn-primary bg-orange-300 border-none text-black  mx-2 rounded-none  my-2"
             onClick={() => handleProduct("refrigerator")}
           >
             Refrigerator

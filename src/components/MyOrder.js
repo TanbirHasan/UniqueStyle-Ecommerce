@@ -14,7 +14,7 @@ const MyOrder = () => {
         const getItem = async () => {
           const email = user.email;
           console.log(email);
-          const url = `http://localhost:9500/myorder?email=${email}`;
+          const url = `http://localhost:7000/myorder?email=${email}`;
 
           const { data } = await axios.get(url);
           setItems(data);

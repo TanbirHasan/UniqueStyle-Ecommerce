@@ -6,7 +6,7 @@ const FashionProduct = () => {
        const [productitem, setProductitem] = useState("fashion");
 
      useEffect(() => {
-       fetch(`http://localhost:9500/products?categories=${productitem}`)
+       fetch(`http://localhost:7000/products?categories=${productitem}`)
          .then((res) => res.json())
          .then((data) => setProduct(data));
      }, []);

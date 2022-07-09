@@ -1,22 +1,22 @@
 import React from 'react';
 import { useSelector,useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom';
-import { delCart } from '../redux/action';
+import { delItem } from '../redux/action/index';
 
 const Cart = () => {
-    const state = useSelector((state) => state.handleCart);
+    const state = useSelector((state) => state.addItems);
     const dispatch = useDispatch()
 
 
     const handleclose = (item) => {
-        dispatch(delCart(item))
+        dispatch(delItem(item));
     }
 
     const cartItems = (cartItem) => {
         return (
           <div>
             <div className="flex justify-center items-center w-2/4 mx-auto my-5 border-2 border-solid py-3">
-              <div className='w-2/4'>
+              <div className="w-2/4">
                 <img src={cartItem.img} className="cart-img" />
               </div>
 
@@ -54,9 +54,9 @@ const Cart = () => {
     } 
     return (
         <div>
-            {state.length === 0 && emptyCart()}
-           {state.length !== 0 && state.map(cartItems) }
-           {state.length !== 0 && checkout()}
+            {state?.length === 0 && emptyCart()}
+           {state?.length !== 0 && state?.map(cartItems) }
+           {state?.length !== 0 && checkout()}
         </div>
     );
 };

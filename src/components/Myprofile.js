@@ -1,4 +1,5 @@
-import React, { useRef, useState } from 'react';
+import { signOut } from 'firebase/auth';
+import React, { useEffect, useRef, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../firebase.config';
@@ -9,16 +10,45 @@ const Myprofile = () => {
      const navigate = useNavigate();
      const [disable, setDisable] = useState(false);
 
+      const nameref = useRef();
+
      const locationref = useRef();
      const phoneref = useRef();
      const facebookref = useRef();
      const [userinfo, setUserinfo] = useState();
 
 
+      useEffect(() => {
+        if (user) {
+          fetch(`http://localhost:7000/userInfo?email=${user.email}`, {
+            method: "GET",
+            headers: {
+              // authorization: `Bearer ${localStorage.getItem(
+              //   "accessToken"
+              // )}`,
+            },
+          })
+            .then((res) => {
+              if (res.status === 401 || res.status === 403) {
+                navigate("/");
+                signOut(auth);
+                localStorage.removeItem("accessToken");
+              }
+              return res.json();
+            })
+            .then((data) => {
+              setUserinfo(data[0]);
+              console.log(data);
+            });
+        }
+      }, [user, userinfo]);
+
+
+
 
       const handleSubmit = (e) => {
         e.preventDefault();
-        const name = user?.displayName;
+        const name = nameref.current.value;
         const email = user?.email;
         const location = locationref.current.value;
         const phone = phoneref.current.value;
@@ -27,21 +57,10 @@ const Myprofile = () => {
         const userInfo = { email, name, location, phone, facebook };
         console.log(userInfo);
 
-        //    const url = "https://salty-everglades-40487.herokuapp.com/userInfo";
-        //    fetch(url, {
-        //      method: "POST",
-        //      headers: {
-        //        "content-type": "application/json",
-        //      },
-        //      body: JSON.stringify(userInfo),
-        //    })
-        //      .then((res) => res.json())
-        //      .then((result) => {
-        //        console.log(result);
-        //        alert("Your User Information Updated Successfully");
-        //      });
+         
+  
 
-        fetch(`http://localhost:9500/usersinfo/${email}`, {
+        fetch(`http://localhost:7000/usersinfo/${email}`, {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -68,10 +87,10 @@ const Myprofile = () => {
               <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
             </figure>
             <div class="card-body items-start">
-              <h2 class="card-title">Name : {user?.displayName}</h2>
-              <h2 class="card-title">Location : </h2>
+              <h2 class="card-title">Name : {userinfo?.name}</h2>
+              <h2 class="card-title">Location : {userinfo?.location} </h2>
               <h2 class="card-title">Email : {user?.email}</h2>
-              <h2 class="card-title">Facebook : </h2>
+              <h2 class="card-title">Facebook : {userinfo?.facebook} </h2>
             </div>
           </div>
         </div>
@@ -91,8 +110,9 @@ const Myprofile = () => {
                      
                       id="username"
                       class="border-1  rounded-r px-4 py-2 w-full"
+                      ref={nameref}
                       type="text"
-                      value={user?.displayName}
+                     
                     />
                   </div>
                 </div>
