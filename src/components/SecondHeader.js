@@ -16,7 +16,7 @@ const SecondHeader = () => {
           Explore Our Products
         </h2>
 
-        <div className="flex justify-evenly">
+        <div className="flex justify-evenly" id="submenu">
           <Carousel cols={2} rows={1} gap={10} loop>
             <Carousel.Item>
               <div className="flex flex-col justify-center items-center">

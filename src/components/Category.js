@@ -15,7 +15,7 @@ const Category = () => {
 
     console.log(items)
     return (
-      <div className="flex justify-center align-center">
+      <div className="flex justify-center align-center lg:flex-row sm:flex flex-col">
         {items.map((items) => (
           <CategoryItem key={items.key} item={items}  />
         ))}

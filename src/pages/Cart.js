@@ -15,7 +15,7 @@ const Cart = () => {
     const cartItems = (cartItem) => {
         return (
           <div>
-            <div className="flex justify-center items-center w-2/4 mx-auto my-5 border-2 border-solid py-3">
+            <div className="flex justify-center lg:px-0 items-center lg:w-2/4 lg:mx-auto my-5 border-2 border-solid py-3 sm:mx-0 w-full px-5">
               <div className="w-2/4">
                 <img src={cartItem.img} className="cart-img" />
               </div>

@@ -27,7 +27,7 @@ const ElectronicProduct = () => {
 
 
     return (
-      <div className="flex">
+      <div className="flex lg:flex-row sm:flex flex-col">
         <div className="flex flex-col  my-5">
           <button
             className="btn btn-primary bg-orange-300 border-none text-black mx-2 rounded-none my-2"

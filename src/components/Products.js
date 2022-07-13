@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import {Link} from "react-router-dom"
 
+
 const Products = ({cat}) => {
   const [products, setProducts] = useState([]);
   const [filteredProduct, setFilteredProduct] = useState([]);
@@ -22,7 +23,7 @@ const Products = ({cat}) => {
 
      
     return (
-      <div className="flex justify-center flex-wrap">
+      <div className="flex justify-center flex-wrap ">
         {products.map((item) => (
           <>
             <div className="flex justify-center flex-wrap">

@@ -204,20 +204,20 @@ const Product = () => {
                   )}
                 </div>
               </div>
-              <div class="flex">
+              <div class="flex lg:flex-row lg:items-center sm:flex flex-col ">
                 <button
-                  class="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded"
+                  class="flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded my-2"
                   onClick={() => handleaddCart(product)}
                 >
                   Add to Cart
                 </button>
                 <button
-                  class="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded"
+                  class="flex lg:ml-5 text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded my-2"
                   onClick={() => handleremovecart(product)}
                 >
                   Remove From Cart
                 </button>
-                <button class="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
+                <button class="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center lg:mt-0 text-gray-500 ml-4 sm:mt-5">
                   <svg
                     fill="currentColor"
                     stroke-linecap="round"

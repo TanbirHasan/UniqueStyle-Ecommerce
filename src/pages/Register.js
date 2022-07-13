@@ -10,6 +10,7 @@ import {
 import auth from '../firebase.config';
  import { Formik } from "formik";
 import validate from '../components/Validate';
+import Loading from '../components/Loading';
 
 const Register = () => {
 
@@ -21,7 +22,7 @@ const [createUserWithEmailAndPassword, user, loading, error] =
    const [updateProfile, updating, updateerror] = useUpdateProfile(auth);
 
   if (loading || gloading || updating ) {
-    return <span>loading</span>;
+    return <Loading></Loading>;
   }
   if (user) {
     navigate("/");

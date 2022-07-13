@@ -12,6 +12,45 @@
         
 
     },
+    {
+  
+      
+        "img" : "https://i.ibb.co/4KTb0VG/Shoes.webp",
+        "title" : "Nick Sports shoes",
+        "desc" : "100% Original Product",
+        "size" : ["40","41","42"],
+        "color" : ["White","Black"],
+        "price" : "1350",
+        "categories" : ["fashion","Shoes"]
+        
+
+    },
+      {
+  
+      
+        "img" : "https://i.ibb.co/cg54PLb/shoes3.webp",
+        "title" : "Bruton New Premium shoes",
+        "desc" : "100% Original Product",
+        "size" : ["40","41","42"],
+        "color" : ["Yellow","Black"],
+        "price" : "1250",
+          "categories" : ["fashion","Shoes"]
+        
+
+    },
+        {
+  
+      
+        "img" : "https://i.ibb.co/CMsgfnL/shoes1.webp",
+        "title" : "Export Quality Sports Gear on",
+        "desc" : "100% Original Product",
+        "size" : ["39","40","41","42"],
+        "color" : ["Yellow","Black","white"],
+        "price" : "1450",
+         "categories" : ["fashion","Shoes"]
+        
+
+    },
 
      {
   

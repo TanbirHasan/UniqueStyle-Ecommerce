@@ -37,38 +37,50 @@ const Header = () => {
                 class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
               >
                 <li>
-                  <a>Item 1</a>
-                </li>
-                <li tabindex="0">
-                  <a class="justify-between">
-                    Parent
-                    <svg
-                      class="fill-current"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-                    </svg>
-                  </a>
-                  <ul class="p-2">
-                    <li>
-                      <a>Submenu 1</a>
-                    </li>
-                    <li>
-                      <a>Submenu 2</a>
-                    </li>
-                  </ul>
+                  <Link className="text-xl font-semibold" to="/">
+                    Home
+                  </Link>
                 </li>
                 <li>
-                  <a>Item 3</a>
+                  <a className="text-xl font-semibold">About</a>
                 </li>
+
+                <li>
+                  <a href="#submenu" className="text-xl font-semibold">
+                    Products
+                  </a>
+                </li>
+                <Link to="/dashboard">
+                  {user ? (
+                    <li>
+                      <a className="text-xl font-semibold">Dashboard</a>
+                    </li>
+                  ) : (
+                    <span></span>
+                  )}
+                </Link>
+
+                {!user ? (
+                  <li>
+                    <Link to="/login" className="text-xl font-semibold">
+                      Login
+                    </Link>
+                  </li>
+                ) : (
+                  <li>
+                    <a
+                      className="text-xl font-semibold"
+                      onClick={() => signOut(auth)}
+                    >
+                      Logout
+                    </a>
+                  </li>
+                )}
               </ul>
             </div>
             <a
               class="btn btn-ghost normal-case text-xl"
-              className="text-3xl font-bold"
+              className="lg:text-3xl sm:text-xl font-bold"
             >
               UniqueStyle
             </a>
@@ -85,12 +97,18 @@ const Header = () => {
               </li>
 
               <li>
-                <a className="text-xl font-semibold">Products</a>
+                <a href="#submenu" className="text-xl font-semibold">
+                  Products
+                </a>
               </li>
               <Link to="/dashboard">
-                <li>
-                  <a className="text-xl font-semibold">Dashboard</a>
-                </li>
+                {user ? (
+                  <li>
+                    <a className="text-xl font-semibold">Dashboard</a>
+                  </li>
+                ) : (
+                  <span></span>
+                )}
               </Link>
 
               {!user ? (
@@ -113,8 +131,8 @@ const Header = () => {
           </div>
           <div className="navbar-end">
             <span className="cart-icon flex">
-              <Link to="/cart" className="flex items-center">
-                <span>
+              <Link to="/cart" className="flex items-center ">
+                <span className="mx-3">
                   {" "}
                   <FaShoppingCart />
                 </span>
@@ -122,10 +140,14 @@ const Header = () => {
               </Link>
             </span>
             <span className="cart-icon">
-              <Link to="/dashboard">
-                {" "}
-                <FaUserAlt />
-              </Link>
+              {user ? (
+                <Link to="/dashboard">
+                  {" "}
+                  <FaUserAlt />
+                </Link>
+              ) : (
+                <span></span>
+              )}
             </span>
           </div>
         </div>

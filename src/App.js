@@ -21,6 +21,7 @@ import Dashboard from './pages/Dashboard';
 import Myprofile from './components/Myprofile';
 import MyOrder from './components/MyOrder';
 import Payment from './components/Payment';
+import DealsofthedayProductdetails from './components/DealsofthedayProductdetails';
 
 
 
@@ -38,10 +39,21 @@ function App() {
         ></Route>
         <Route path="/cart" element={<Cart />}></Route>
         <Route path="/product/:id" element={<Product />}></Route>
+        <Route
+          path="/dealsoftheday/:id"
+          element={<DealsofthedayProductdetails />}
+        ></Route>
         <Route path="/dashboard" element={<Dashboard />}>
           <Route index element={<Myprofile />}></Route>
 
-          <Route path="orders" element={<MyOrder />}></Route>
+          <Route
+            path="orders"
+            element={
+              <RequireAuth>
+                <MyOrder />
+              </RequireAuth>
+            }
+          ></Route>
           <Route path="payment/:id" element={<Payment />}></Route>
         </Route>
 

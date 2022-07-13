@@ -35,3 +35,41 @@
    height: 130px;
  }
 
+ .deals-card{
+  align-items: start;
+ }
+
+
+ /* pagination style */
+
+ .pagination{
+  display: flex;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  justify-content: flex-start;
+  list-style: none;
+  cursor: pointer;
+ }
+
+ .pagination a{
+  padding: 10px;
+ 
+  border: 1px solid skyblue;
+  color: skyblue;
+ }
+
+ .pagination__link{
+  font-weight: bold;
+ }
+
+ .pagination__link--active a{
+  color: black;
+background: skyblue;
+
+ }
+
+ .pagination__link--disabled a{
+  color: grey;
+  border: 1px solid grey;
+
+ }

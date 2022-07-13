@@ -2,8 +2,8 @@ import React from 'react';
 
 const Banner = () => {
     return (
-      <div className="flex justify-center h-screen">
-        <div className="w-2/4  px-20 py-20 my-10">
+      <div className="flex justify-center h-screen lg:flex-row sm:flex flex-col">
+        <div className="lg:w-2/4 lg:px-20 py-20 my-10 sm:w-full px-10 mt-10 py-10">
           <h2 className="text-4xl font-bold py-3">
             Make Your
             <br />
@@ -15,7 +15,7 @@ const Banner = () => {
           </p>
           <button className="btn btn-succes">Shop Now</button>
         </div>
-        <div className="w-2/4">
+        <div className="lg:w-2/4 sm:w-full">
           <img
             src="https://i.ibb.co/6bSxdCP/pexels-jack-winbow-1457983.jpg"
             className="w-full h-full object-cover "

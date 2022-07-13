@@ -18,7 +18,9 @@ const Myprofile = () => {
      const [userinfo, setUserinfo] = useState();
 
 
+   
       useEffect(() => {
+      
         if (user) {
           fetch(`http://localhost:7000/userInfo?email=${user.email}`, {
             method: "GET",

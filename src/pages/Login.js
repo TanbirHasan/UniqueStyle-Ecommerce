@@ -9,10 +9,13 @@ import {
 import auth from "../firebase.config";
 import { Formik } from "formik";
 import validate from "../components/Validate";
+import Loading from "../components/Loading";
 
 const Login = () => {
   const navigate = useNavigate();
   const [user] = useAuthState(auth)
+
+   let errorMessage;
 
   const emailref = useRef()
   const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
@@ -23,11 +26,15 @@ const [signInWithEmailAndPassword, newuser, loading, error] =
   const [forget,setForget] = useState(false);
 
   if (loading || gloading) {
-    return <span>loading</span>;
+    return <Loading></Loading>;
   }
   if (newuser) {
     navigate("/");
   }
+
+      if (error) {
+        errorMessage = <p className="text-red">{error?.message.slice(10)}</p>;
+      }
 
   const resetPassword = async () => {
      const email = emailref.current.value;
@@ -144,6 +151,7 @@ const [signInWithEmailAndPassword, newuser, loading, error] =
                     </p>
                   )}
                 </div>
+                {errorMessage}
 
                 <div className="text-grey-dark mt-6">
                   New Here?

@@ -12,7 +12,7 @@ const LatestCollction = () => {
     },[])
     return (
       <div>
-        <h2 className="text-3xl bold text-center mb-10">
+        <h2 className="text-3xl bold text-center mt-10 mb-10">
           Our Latest Collection
         </h2>
         <div className="flex justify-center flex-wrap">
